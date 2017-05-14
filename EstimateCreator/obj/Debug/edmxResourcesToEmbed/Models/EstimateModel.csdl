@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EstimatorModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BrandMaster">
+    <Key>
+      <PropertyRef Name="BrandID" />
+    </Key>
+    <Property Name="BrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Brand_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Client_ID" Type="Int32" />
+    <NavigationProperty Name="ClientMaster" Relationship="Self.FK__BrandMast__Clien__0AD2A005" FromRole="BrandMaster" ToRole="ClientMaster" />
+    <NavigationProperty Name="CaptionMasters" Relationship="Self.FK__CaptionMa__Brand__1273C1CD" FromRole="BrandMaster" ToRole="CaptionMaster" />
+  </EntityType>
+  <EntityType Name="CaptionMaster">
+    <Key>
+      <PropertyRef Name="CaptionID" />
+    </Key>
+    <Property Name="CaptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caption" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BrandID" Type="Int32" />
+    <NavigationProperty Name="BrandMaster" Relationship="Self.FK__CaptionMa__Brand__1273C1CD" FromRole="CaptionMaster" ToRole="BrandMaster" />
+  </EntityType>
+  <EntityType Name="ClientMaster">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Client_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BrandMasters" Relationship="Self.FK__BrandMast__Clien__0AD2A005" FromRole="ClientMaster" ToRole="BrandMaster" />
+  </EntityType>
+  <EntityType Name="EstimateEdition">
+    <Key>
+      <PropertyRef Name="EST_EditionID" />
+    </Key>
+    <Property Name="EST_EditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_PUBID" Type="Int32" />
+    <Property Name="Edition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Width" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total_Size" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Rate" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total_Cost" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Agency_Discount" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Total_NetCost" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="EstimatePublication" Relationship="Self.FK__EstimateE__EST_P__22AA2996" FromRole="EstimateEdition" ToRole="EstimatePublication" />
+  </EntityType>
+  <EntityType Name="EstimateHeader">
+    <Key>
+      <PropertyRef Name="EST_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EST_Date" Type="DateTime" Precision="3" />
+    <Property Name="Campaign" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Agency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientID" Type="Int32" />
+    <Property Name="BrandID" Type="Int32" />
+    <Property Name="PeriodFrom" Type="DateTime" Precision="3" />
+    <Property Name="PeriodTO" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="EstimatePublications" Relationship="Self.FK__EstimateP__EST_I__1DE57479" FromRole="EstimateHeader" ToRole="EstimatePublication" />
+  </EntityType>
+  <EntityType Name="EstimatePublication">
+    <Key>
+      <PropertyRef Name="EST_PUBID" />
+    </Key>
+    <Property Name="EST_PUBID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_Publication" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="EST_ID" Type="Int32" />
+    <Property Name="Pub_Language" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Total_Edition" Type="Int32" />
+    <NavigationProperty Name="EstimateEditions" Relationship="Self.FK__EstimateE__EST_P__22AA2996" FromRole="EstimatePublication" ToRole="EstimateEdition" />
+    <NavigationProperty Name="EstimateHeader" Relationship="Self.FK__EstimateP__EST_I__1DE57479" FromRole="EstimatePublication" ToRole="EstimateHeader" />
+  </EntityType>
+  <Association Name="FK__BrandMast__Clien__0AD2A005">
+    <End Role="ClientMaster" Type="Self.ClientMaster" Multiplicity="0..1" />
+    <End Role="BrandMaster" Type="Self.BrandMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientMaster">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BrandMaster">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CaptionMa__Brand__1273C1CD">
+    <End Role="BrandMaster" Type="Self.BrandMaster" Multiplicity="0..1" />
+    <End Role="CaptionMaster" Type="Self.CaptionMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrandMaster">
+        <PropertyRef Name="BrandID" />
+      </Principal>
+      <Dependent Role="CaptionMaster">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EstimateE__EST_P__22AA2996">
+    <End Role="EstimatePublication" Type="Self.EstimatePublication" Multiplicity="0..1" />
+    <End Role="EstimateEdition" Type="Self.EstimateEdition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstimatePublication">
+        <PropertyRef Name="EST_PUBID" />
+      </Principal>
+      <Dependent Role="EstimateEdition">
+        <PropertyRef Name="EST_PUBID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EstimateP__EST_I__1DE57479">
+    <End Role="EstimateHeader" Type="Self.EstimateHeader" Multiplicity="0..1" />
+    <End Role="EstimatePublication" Type="Self.EstimatePublication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstimateHeader">
+        <PropertyRef Name="EST_ID" />
+      </Principal>
+      <Dependent Role="EstimatePublication">
+        <PropertyRef Name="EST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EstimatorDbContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BrandMasters" EntityType="Self.BrandMaster" />
+    <EntitySet Name="CaptionMasters" EntityType="Self.CaptionMaster" />
+    <EntitySet Name="ClientMasters" EntityType="Self.ClientMaster" />
+    <EntitySet Name="EstimateEditions" EntityType="Self.EstimateEdition" />
+    <EntitySet Name="EstimateHeaders" EntityType="Self.EstimateHeader" />
+    <EntitySet Name="EstimatePublications" EntityType="Self.EstimatePublication" />
+    <AssociationSet Name="FK__BrandMast__Clien__0AD2A005" Association="Self.FK__BrandMast__Clien__0AD2A005">
+      <End Role="ClientMaster" EntitySet="ClientMasters" />
+      <End Role="BrandMaster" EntitySet="BrandMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CaptionMa__Brand__1273C1CD" Association="Self.FK__CaptionMa__Brand__1273C1CD">
+      <End Role="BrandMaster" EntitySet="BrandMasters" />
+      <End Role="CaptionMaster" EntitySet="CaptionMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EstimateE__EST_P__22AA2996" Association="Self.FK__EstimateE__EST_P__22AA2996">
+      <End Role="EstimatePublication" EntitySet="EstimatePublications" />
+      <End Role="EstimateEdition" EntitySet="EstimateEditions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EstimateP__EST_I__1DE57479" Association="Self.FK__EstimateP__EST_I__1DE57479">
+      <End Role="EstimateHeader" EntitySet="EstimateHeaders" />
+      <End Role="EstimatePublication" EntitySet="EstimatePublications" />
+    </AssociationSet>
+    <EntitySet Name="UserDetails" EntityType="EstimatorModel.UserDetail" />
+    <FunctionImport Name="sp_ValidateUser" ReturnType="Collection(EstimatorModel.sp_ValidateUser_Result)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UserPassword" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <ComplexType Name="sp_ValidateUser_Result">
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="UserPassword" Nullable="true" MaxLength="200" />
+  </ComplexType>
+</Schema>

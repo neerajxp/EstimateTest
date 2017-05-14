@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EstimatorModelStoreContainer" CdmEntityContainer="EstimatorDbContext">
+    <EntitySetMapping Name="BrandMasters">
+      <EntityTypeMapping TypeName="EstimatorModel.BrandMaster">
+        <MappingFragment StoreEntitySet="BrandMaster">
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="Brand_Name" ColumnName="Brand_Name" />
+          <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CaptionMasters">
+      <EntityTypeMapping TypeName="EstimatorModel.CaptionMaster">
+        <MappingFragment StoreEntitySet="CaptionMaster">
+          <ScalarProperty Name="CaptionID" ColumnName="CaptionID" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientMasters">
+      <EntityTypeMapping TypeName="EstimatorModel.ClientMaster">
+        <MappingFragment StoreEntitySet="ClientMaster">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Client_Name" ColumnName="Client_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstimateEditions">
+      <EntityTypeMapping TypeName="EstimatorModel.EstimateEdition">
+        <MappingFragment StoreEntitySet="EstimateEdition">
+          <ScalarProperty Name="EST_EditionID" ColumnName="EST_EditionID" />
+          <ScalarProperty Name="EST_PUBID" ColumnName="EST_PUBID" />
+          <ScalarProperty Name="Edition" ColumnName="Edition" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Total_Size" ColumnName="Total_Size" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Total_Cost" ColumnName="Total_Cost" />
+          <ScalarProperty Name="Agency_Discount" ColumnName="Agency_Discount" />
+          <ScalarProperty Name="Total_NetCost" ColumnName="Total_NetCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstimateHeaders">
+      <EntityTypeMapping TypeName="EstimatorModel.EstimateHeader">
+        <MappingFragment StoreEntitySet="EstimateHeader">
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="EST_NO" ColumnName="EST_NO" />
+          <ScalarProperty Name="EST_Date" ColumnName="EST_Date" />
+          <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+          <ScalarProperty Name="Agency" ColumnName="Agency" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+          <ScalarProperty Name="PeriodFrom" ColumnName="PeriodFrom" />
+          <ScalarProperty Name="PeriodTO" ColumnName="PeriodTO" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstimatePublications">
+      <EntityTypeMapping TypeName="EstimatorModel.EstimatePublication">
+        <MappingFragment StoreEntitySet="EstimatePublication">
+          <ScalarProperty Name="EST_PUBID" ColumnName="EST_PUBID" />
+          <ScalarProperty Name="EST_Publication" ColumnName="EST_Publication" />
+          <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+          <ScalarProperty Name="Pub_Language" ColumnName="Pub_Language" />
+          <ScalarProperty Name="Total_Edition" ColumnName="Total_Edition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="EstimatorModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetails">
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_ValidateUser" FunctionName="EstimatorModel.Store.sp_ValidateUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EstimatorModel.sp_ValidateUser_Result">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

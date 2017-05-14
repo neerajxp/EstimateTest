@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BrandMaster">
+    <Key>
+      <PropertyRef Name="BrandID" />
+    </Key>
+    <Property Name="BrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ClientId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ClientMaster">
+    <Key>
+      <PropertyRef Name="ClientId" />
+    </Key>
+    <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientName" Type="Binary" MaxLength="50" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="EstimateEdition">
+    <Key>
+      <PropertyRef Name="EST_EditionID" />
+    </Key>
+    <Property Name="EST_EditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_PUBID" Type="Int32" />
+    <Property Name="EST_ID" Type="Int32" />
+    <Property Name="Edition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Height" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="EstimateHeader">
+    <Key>
+      <PropertyRef Name="EST_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EST_Date" Type="DateTime" Precision="3" />
+    <Property Name="Campaign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EstimatePublication">
+    <Key>
+      <PropertyRef Name="EST_PUBID" />
+    </Key>
+    <Property Name="EST_PUBID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_Publication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EST_ID" Type="Int32" />
+    <Property Name="Pub_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EstimateScheduled">
+    <Key>
+      <PropertyRef Name="EST_SchId" />
+    </Key>
+    <Property Name="EST_SchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EST_EditionID" Type="Int32" />
+    <Property Name="EST_PUBID" Type="Int32" />
+    <Property Name="EST_ID" Type="Int32" />
+    <Property Name="Langauge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BrandMasters" EntityType="Self.BrandMaster" />
+    <EntitySet Name="ClientMasters" EntityType="Self.ClientMaster" />
+    <EntitySet Name="EstimateEditions" EntityType="Self.EstimateEdition" />
+    <EntitySet Name="EstimateHeaders" EntityType="Self.EstimateHeader" />
+    <EntitySet Name="EstimatePublications" EntityType="Self.EstimatePublication" />
+    <EntitySet Name="EstimateScheduleds" EntityType="Self.EstimateScheduled" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+    <FunctionImport Name="Procedure" ReturnType="Collection(Database1Model.Procedure_Result)">
+      <Parameter Name="param1" Mode="In" Type="Int32" />
+      <Parameter Name="param2" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_ValidateUser" ReturnType="Collection(String)">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="UserPassword" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Procedure_Result">
+    <Property Type="Int32" Name="Column1" Nullable="true" />
+    <Property Type="Int32" Name="Column2" Nullable="true" />
+  </ComplexType>
+</Schema>

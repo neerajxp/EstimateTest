@@ -1,0 +1,86 @@
+﻿.form-group{
+    display: inline-block;
+     
+     margin:20px 79px; 
+}
+div.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 30%;
+    height: 300px;
+}
+.text-label{
+    font-family:Georgia;
+    font-size:large;
+    font-weight:100;
+}
+#headline{
+    font-family:'Segoe UI';
+    font-size:large;
+    font-weight:bolder;
+    align-content:center;
+    height: 15%;
+    color:white;
+    background:#ED6035;
+}
+#publicationbtn{
+    box-sizing:padding-box;
+    border:hidden;
+    color:white;
+    background-color:#66BF6C;
+    height: 8%;
+    margin-left: 39%;
+    font-family:'Segoe UI';
+}
+input{
+
+    border-radius:3px;
+    padding:2px 2px;
+    font-family:'Segoe UI';
+    font-size:small;
+   
+}
+#ShowPublicationBtn #createedition #addedition{
+
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color:lightseagreen;
+}
+#CreateEstimate{
+   width:50%;
+   margin: 0 auto;
+   border:solid 2px lightgrey;
+   height:500px;
+}
+
+br{
+    clear:both;
+}
+
+#CreatePublication{
+   width:50%;
+   margin: 0 auto;
+   border:solid 2px lightgrey;
+   height:250px;
+   visibility:hidden;   
+}
+#CreateEdition{
+   width:50%;
+   margin: 0 auto;
+   border:solid 2px lightgrey;
+   height:400px;
+   visibility:hidden;
+}
+.alignDropdDown{
+    margin-right: 43px;
+    width: 100%;
+    border-radius:3px;
+    padding:2px 2px;
+    font-family:'Segoe UI';
+    font-size:small;
+}
+.text-danger{
+    color:red;
+    display: block;
+}

@@ -1,0 +1,162 @@
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\csc.exe
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\vbc.exe
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\VBCSCompiler.exe
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EstimateCreator.dll.config
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EstimateCreator.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EstimateCreator.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Antlr3.Runtime.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\DataAccessLayer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EntityFramework.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EntityFramework.SqlServer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\InterfaceLayer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Newtonsoft.Json.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Owin.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Net.Http.Formatting.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Helpers.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.Owin.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.WebHost.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Mvc.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Optimization.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Razor.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.Razor.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\WebGrease.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\DataAccessLayer.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\InterfaceLayer.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Newtonsoft.Json.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Net.Http.Formatting.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Helpers.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.WebHost.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Mvc.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Optimization.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Razor.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.WebPages.Razor.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Antlr3.Runtime.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EntityFramework.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\EntityFramework.SqlServer.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\bin\System.Web.Http.Owin.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\obj\Debug\EstimateCreator.csprojResolveAssemblyReference.cache
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\obj\Debug\EstimateCreator.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\EstimateCreator\obj\Debug\EstimateCreator.pdb
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\csc.exe
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\System.Collections.Immutable.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\System.Reflection.Metadata.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\vbc.exe
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\VBCSCompiler.exe
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\roslyn\VBCSCompiler.exe.config
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EstimateCreator.dll.config
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EstimateCreator.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EstimateCreator.pdb
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Antlr3.Runtime.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\DataAccessLayer.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EntityFramework.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EntityFramework.SqlServer.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\InterfaceLayer.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Google.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Web.Infrastructure.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Newtonsoft.Json.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Owin.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Net.Http.Formatting.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Helpers.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.Owin.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.WebHost.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Mvc.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Optimization.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Razor.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.Deployment.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.Razor.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\WebGrease.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\DataAccessLayer.pdb
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\InterfaceLayer.pdb
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Newtonsoft.Json.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Net.Http.Formatting.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Helpers.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.WebHost.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Mvc.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Optimization.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Razor.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.Deployment.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.WebPages.Razor.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Antlr3.Runtime.pdb
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EntityFramework.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\EntityFramework.SqlServer.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Google.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\bin\System.Web.Http.Owin.xml
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\obj\Debug\EstimateCreator.csprojResolveAssemblyReference.cache
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\obj\Debug\EstimateCreator.dll
+C:\Neeraj\Projects\GitHub\Estimator\EstimateCreator\obj\Debug\EstimateCreator.pdb

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EstimatorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BrandMaster">
+    <Key>
+      <PropertyRef Name="BrandID" />
+    </Key>
+    <Property Name="BrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Brand_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Client_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="CaptionMaster">
+    <Key>
+      <PropertyRef Name="CaptionID" />
+    </Key>
+    <Property Name="CaptionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caption" Type="varchar" MaxLength="200" />
+    <Property Name="BrandID" Type="int" />
+  </EntityType>
+  <EntityType Name="ClientMaster">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Client_Name" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="EstimateHeader">
+    <Key>
+      <PropertyRef Name="EST_ID" />
+    </Key>
+    <Property Name="EST_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EST_NO" Type="varchar" MaxLength="50" />
+    <Property Name="EST_Date" Type="datetime" />
+    <Property Name="Campaign" Type="varchar" MaxLength="200" />
+    <Property Name="Agency" Type="varchar" MaxLength="50" />
+    <Property Name="PO_NO" Type="varchar" MaxLength="50" />
+    <Property Name="PO_Date" Type="datetime" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="BrandID" Type="int" />
+    <Property Name="PeriodFrom" Type="datetime" />
+    <Property Name="PeriodTO" Type="datetime" />
+    <Property Name="SAC_PER" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="AAC_PER" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Gross_Cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Net_Cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="EstimatePublication">
+    <Key>
+      <PropertyRef Name="EST_PUBID" />
+    </Key>
+    <Property Name="EST_PUBID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EST_Publication" Type="varchar" MaxLength="200" />
+    <Property Name="EST_ID" Type="int" />
+    <Property Name="Pub_Language" Type="varchar" MaxLength="200" />
+    <Property Name="Total_Edition" Type="int" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Total_Insertion" Type="int" />
+    <Property Name="Total_Cost" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Agency_Discount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Total_NetCost" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="FK__BrandMast__Clien__0AD2A005">
+    <End Role="ClientMaster" Type="Self.ClientMaster" Multiplicity="0..1" />
+    <End Role="BrandMaster" Type="Self.BrandMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientMaster">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="BrandMaster">
+        <PropertyRef Name="Client_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CaptionMa__Brand__1273C1CD">
+    <End Role="BrandMaster" Type="Self.BrandMaster" Multiplicity="0..1" />
+    <End Role="CaptionMaster" Type="Self.CaptionMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrandMaster">
+        <PropertyRef Name="BrandID" />
+      </Principal>
+      <Dependent Role="CaptionMaster">
+        <PropertyRef Name="BrandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EstimateP__EST_I__1DE57479">
+    <End Role="EstimateHeader" Type="Self.EstimateHeader" Multiplicity="0..1" />
+    <End Role="EstimatePublication" Type="Self.EstimatePublication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstimateHeader">
+        <PropertyRef Name="EST_ID" />
+      </Principal>
+      <Dependent Role="EstimatePublication">
+        <PropertyRef Name="EST_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EstimatorModelStoreContainer">
+    <EntitySet Name="BrandMaster" EntityType="Self.BrandMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CaptionMaster" EntityType="Self.CaptionMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientMaster" EntityType="Self.ClientMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstimateHeader" EntityType="Self.EstimateHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstimatePublication" EntityType="Self.EstimatePublication" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BrandMast__Clien__0AD2A005" Association="Self.FK__BrandMast__Clien__0AD2A005">
+      <End Role="ClientMaster" EntitySet="ClientMaster" />
+      <End Role="BrandMaster" EntitySet="BrandMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CaptionMa__Brand__1273C1CD" Association="Self.FK__CaptionMa__Brand__1273C1CD">
+      <End Role="BrandMaster" EntitySet="BrandMaster" />
+      <End Role="CaptionMaster" EntitySet="CaptionMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EstimateP__EST_I__1DE57479" Association="Self.FK__EstimateP__EST_I__1DE57479">
+      <End Role="EstimateHeader" EntitySet="EstimateHeader" />
+      <End Role="EstimatePublication" EntitySet="EstimatePublication" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

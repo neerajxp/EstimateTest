@@ -1,0 +1,23 @@
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\InterfaceLayer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\InterfaceLayer.pdb
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\hdewani\documents\visual studio 2015\Projects\EstimateCreator\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\InterfaceLayer.dll
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\InterfaceLayer.pdb
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Neeraj\Projects\GitHub\Estimator\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

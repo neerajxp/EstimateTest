@@ -1,0 +1,34 @@
+﻿@model EstimateCreator.Models.UserDetail
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm("ValidateUser", "Login", FormMethod.Post))
+{
+    <div>
+        <div>
+            @Html.LabelFor(model=>model.UserName)
+            <div>
+                @Html.EditorFor(model => model.UserName)
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div>
+            <div>
+                @Html.LabelFor(model => model.UserPassword)
+                <div>
+                    @Html.EditorFor(model => model.UserPassword)
+                    @Html.ValidationMessageFor(model => model.UserPassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        <div>
+            <input type="submit" value="Login" />
+        </div>
+    </div>
+        </div>
+
+}
+

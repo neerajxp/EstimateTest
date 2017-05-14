@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BrandMaster">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrandName" Type="varchar" MaxLength="50" />
+          <Property Name="ClientId" Type="int" />
+        </EntityType>
+        <EntityType Name="ClientMaster">
+          <Key>
+            <PropertyRef Name="ClientId" />
+          </Key>
+          <Property Name="ClientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientName" Type="varbinary" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EstimateEdition">
+          <Key>
+            <PropertyRef Name="EST_EditionID" />
+          </Key>
+          <Property Name="EST_EditionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EST_PUBID" Type="int" />
+          <Property Name="EST_ID" Type="int" />
+          <Property Name="Edition" Type="varchar" MaxLength="50" />
+          <Property Name="Height" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="EstimateHeader">
+          <Key>
+            <PropertyRef Name="EST_ID" />
+          </Key>
+          <Property Name="EST_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EST_NO" Type="varchar" MaxLength="50" />
+          <Property Name="EST_Date" Type="datetime" />
+          <Property Name="Campaign" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EstimatePublication">
+          <Key>
+            <PropertyRef Name="EST_PUBID" />
+          </Key>
+          <Property Name="EST_PUBID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EST_Publication" Type="varchar" MaxLength="50" />
+          <Property Name="EST_ID" Type="int" />
+          <Property Name="Pub_Language" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EstimateScheduled">
+          <Key>
+            <PropertyRef Name="EST_SchId" />
+          </Key>
+          <Property Name="EST_SchId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EST_EditionID" Type="int" />
+          <Property Name="EST_PUBID" Type="int" />
+          <Property Name="EST_ID" Type="int" />
+          <Property Name="Langauge" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LoginId" Type="nchar" MaxLength="10" />
+          <Property Name="Password" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <Function Name="Procedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="param1" Type="int" Mode="In" />
+          <Parameter Name="param2" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ValidateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserName" Type="varchar" Mode="In" />
+          <Parameter Name="UserPassword" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="BrandMaster" EntityType="Self.BrandMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientMaster" EntityType="Self.ClientMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstimateEdition" EntityType="Self.EstimateEdition" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstimateHeader" EntityType="Self.EstimateHeader" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstimatePublication" EntityType="Self.EstimatePublication" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EstimateScheduled" EntityType="Self.EstimateScheduled" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BrandMaster">
+          <Key>
+            <PropertyRef Name="BrandID" />
+          </Key>
+          <Property Name="BrandID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrandName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClientId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ClientMaster">
+          <Key>
+            <PropertyRef Name="ClientId" />
+          </Key>
+          <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientName" Type="Binary" MaxLength="50" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EstimateEdition">
+          <Key>
+            <PropertyRef Name="EST_EditionID" />
+          </Key>
+          <Property Name="EST_EditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EST_PUBID" Type="Int32" />
+          <Property Name="EST_ID" Type="Int32" />
+          <Property Name="Edition" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Height" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="EstimateHeader">
+          <Key>
+            <PropertyRef Name="EST_ID" />
+          </Key>
+          <Property Name="EST_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EST_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EST_Date" Type="DateTime" Precision="3" />
+          <Property Name="Campaign" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EstimatePublication">
+          <Key>
+            <PropertyRef Name="EST_PUBID" />
+          </Key>
+          <Property Name="EST_PUBID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EST_Publication" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EST_ID" Type="Int32" />
+          <Property Name="Pub_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="EstimateScheduled">
+          <Key>
+            <PropertyRef Name="EST_SchId" />
+          </Key>
+          <Property Name="EST_SchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EST_EditionID" Type="Int32" />
+          <Property Name="EST_PUBID" Type="Int32" />
+          <Property Name="EST_ID" Type="Int32" />
+          <Property Name="Langauge" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginId" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BrandMasters" EntityType="Self.BrandMaster" />
+          <EntitySet Name="ClientMasters" EntityType="Self.ClientMaster" />
+          <EntitySet Name="EstimateEditions" EntityType="Self.EstimateEdition" />
+          <EntitySet Name="EstimateHeaders" EntityType="Self.EstimateHeader" />
+          <EntitySet Name="EstimatePublications" EntityType="Self.EstimatePublication" />
+          <EntitySet Name="EstimateScheduleds" EntityType="Self.EstimateScheduled" />
+          <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+          <FunctionImport Name="Procedure" ReturnType="Collection(Database1Model.Procedure_Result)">
+            <Parameter Name="param1" Mode="In" Type="Int32" />
+            <Parameter Name="param2" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ValidateUser" ReturnType="Collection(String)">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="UserPassword" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="Procedure_Result">
+          <Property Type="Int32" Name="Column1" Nullable="true" />
+          <Property Type="Int32" Name="Column2" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+          <EntitySetMapping Name="BrandMasters">
+            <EntityTypeMapping TypeName="Database1Model.BrandMaster">
+              <MappingFragment StoreEntitySet="BrandMaster">
+                <ScalarProperty Name="BrandID" ColumnName="BrandID" />
+                <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientMasters">
+            <EntityTypeMapping TypeName="Database1Model.ClientMaster">
+              <MappingFragment StoreEntitySet="ClientMaster">
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstimateEditions">
+            <EntityTypeMapping TypeName="Database1Model.EstimateEdition">
+              <MappingFragment StoreEntitySet="EstimateEdition">
+                <ScalarProperty Name="EST_EditionID" ColumnName="EST_EditionID" />
+                <ScalarProperty Name="EST_PUBID" ColumnName="EST_PUBID" />
+                <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+                <ScalarProperty Name="Edition" ColumnName="Edition" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstimateHeaders">
+            <EntityTypeMapping TypeName="Database1Model.EstimateHeader">
+              <MappingFragment StoreEntitySet="EstimateHeader">
+                <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+                <ScalarProperty Name="EST_NO" ColumnName="EST_NO" />
+                <ScalarProperty Name="EST_Date" ColumnName="EST_Date" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstimatePublications">
+            <EntityTypeMapping TypeName="Database1Model.EstimatePublication">
+              <MappingFragment StoreEntitySet="EstimatePublication">
+                <ScalarProperty Name="EST_PUBID" ColumnName="EST_PUBID" />
+                <ScalarProperty Name="EST_Publication" ColumnName="EST_Publication" />
+                <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+                <ScalarProperty Name="Pub_Language" ColumnName="Pub_Language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EstimateScheduleds">
+            <EntityTypeMapping TypeName="Database1Model.EstimateScheduled">
+              <MappingFragment StoreEntitySet="EstimateScheduled">
+                <ScalarProperty Name="EST_SchId" ColumnName="EST_SchId" />
+                <ScalarProperty Name="EST_EditionID" ColumnName="EST_EditionID" />
+                <ScalarProperty Name="EST_PUBID" ColumnName="EST_PUBID" />
+                <ScalarProperty Name="EST_ID" ColumnName="EST_ID" />
+                <ScalarProperty Name="Langauge" ColumnName="Langauge" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLogins">
+            <EntityTypeMapping TypeName="Database1Model.UserLogin">
+              <MappingFragment StoreEntitySet="UserLogin">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Procedure" FunctionName="Database1Model.Store.Procedure">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Database1Model.Procedure_Result">
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ValidateUser" FunctionName="Database1Model.Store.sp_ValidateUser" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

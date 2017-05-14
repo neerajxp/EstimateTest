@@ -1,0 +1,200 @@
+﻿@model EstimateCreator.Models.EstimateCreatorViewModel
+@{
+    ViewBag.Title = "CreateEstimate";
+}
+<link href="~/Content/Style.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+@using (Html.BeginForm("CreateEstimate", "CreateEstimator", FormMethod.Post))
+{
+   
+
+    <div id="createEstimate">
+        <div id="headline">
+            CreateEstimate
+      </div>
+       
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.Campaign ,new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.Campaign)
+                <span> @Html.ValidationMessageFor(model => model.EstimateHeader.Campaign, "", new { @class = "text-danger" })</span>
+            </div>
+        </div>
+        
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.Agency,new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.Agency)
+                @Html.ValidationMessageFor(model => model.EstimateHeader.Agency, "", new { @class = "text-danger" })
+            </div>
+
+        </div>
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.PeriodFrom, new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.PeriodFrom, new { @Id = "txtContent" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.PeriodFrom, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.PeriodTO, new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.PeriodTO, new { @class = "txtContent" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.PeriodTO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.ClientID, new { @class = "text-label" })
+            <div>
+                @Html.DropDownListFor(Model => Model.EstimateHeader.ClientID, new SelectList(ViewBag.Client, "Value", "Text") , new { @class = "alignDropdDown" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.ClientID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.BrandID, new { @class = "text-label" })
+            <div>
+                @Html.DropDownListFor(model => model.EstimateHeader.BrandID, new SelectList(ViewBag.Brand, "Value", "Text"), new { @class = "alignDropdDown" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.BrandID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <br />*@
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.EST_NO, new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.EST_NO, new { @class = "txtContent" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.EST_NO, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EstimateHeader.EST_Date, new { @class = "text-label" })
+            <div>
+                @Html.EditorFor(model => model.EstimateHeader.EST_Date, new { @class = "txtContent" })
+                @Html.ValidationMessageFor(model => model.EstimateHeader.EST_Date, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div><button type="button" onclick="AddPublication()" id="publicationbtn">Add Publication</button></div>
+    </div>
+
+        <div id="CreatePublication">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.EST_Publication, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.EST_Publication, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.EST_Publication, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.Pub_Language, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.Pub_Language, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.Pub_Language, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.Total_Edition, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.Total_Edition, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.Total_Edition, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+            <div><button type="button" id="createedition" onclick="CreateEdition()">Create Edition</button></div>
+        </div>
+    
+        <div id="CreateEdition">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Edition, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Edition, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Edition, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Height, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Height, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Height, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            @*<div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Width, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Width, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Width, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Rate, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Rate, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Rate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Total_Cost, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Total_Cost, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Total_Cost, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Agency_Discount, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Agency_Discount, new { @class = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Agency_Discount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Total_NetCost, new { @class = "text-label" })
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Total_NetCost, new { @Id = "txtContent" })
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Total_NetCost, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+            <div>
+                <input type="submit" value="Save" id="addedition" />
+            </div>
+        </div>
+       
+        <script>
+    function AddPublication() {
+        document.getElementById("CreatePublication").style.visibility = "visible";
+    }
+    function CreateEdition()
+    {
+        document.getElementById("CreateEdition").style.visibility = "visible";
+    }
+
+    $(document).ready(function () {
+
+        var date = new Date();
+        var currentMonth = date.getMonth();
+        var currentDate = date.getDate();
+        var currentYear = date.getFullYear();
+        $('.date').datepicker({
+            dateFormat: "dd/M/yy",
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "-60:+0",
+            rangeLow: new Date(currentYear, currentMonth, currentDate)
+
+        });
+
+    });
+        </script>
+}
+

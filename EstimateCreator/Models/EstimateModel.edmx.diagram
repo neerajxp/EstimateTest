@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6a4a56a65c3d432f8fcc52940316e046" Name="Diagram1">
+        <EntityTypeShape EntityType="EstimatorModel.BrandMaster" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstimatorModel.CaptionMaster" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstimatorModel.ClientMaster" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstimatorModel.EstimateEdition" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstimatorModel.EstimateHeader" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstimatorModel.EstimatePublication" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="EstimatorModel.FK__BrandMast__Clien__0AD2A005" ManuallyRouted="false" />
+        <AssociationConnector Association="EstimatorModel.FK__CaptionMa__Brand__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="EstimatorModel.FK__EstimateE__EST_P__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="EstimatorModel.FK__EstimateP__EST_I__1DE57479" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EstimatorModel.UserDetail" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

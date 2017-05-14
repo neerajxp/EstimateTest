@@ -1,0 +1,155 @@
+﻿@model EstimateCreator.Models.EstimateCreatorViewModel
+
+@{
+    ViewBag.Title = "CampaignCreator";
+}
+
+<h2>CampaignCreator</h2>
+
+@using (Html.BeginForm("CreateEstimate", "CreateEstimator",FormMethod.Post))
+{
+
+        <div id="CreateEstimate">
+            <h4>EstimateHeader</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.Campaign)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.Campaign)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.Campaign, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.Agency)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.Agency)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.Agency, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.PeriodFrom)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.PeriodFrom)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.PeriodFrom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.PeriodTO)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.PeriodTO)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.PeriodTO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.ClientID)
+                <div>
+                    @Html.DropDownListFor(Model=>Model.EstimateHeader.ClientID, new SelectList(ViewBag.Client, "ClientID", "Client_Name"))
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.BrandID)
+                <div>
+                    @Html.DropDownListFor(model => model.EstimateHeader.BrandID, new SelectList(ViewBag.Brand, "BrandID", "Brand_Name"))
+
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.EST_NO)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.EST_NO)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.EST_NO, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateHeader.EST_Date)
+                <div>
+                    @Html.EditorFor(model => model.EstimateHeader.EST_Date)
+                    @Html.ValidationMessageFor(model => model.EstimateHeader.EST_Date, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    
+        <div id="CreatePublication">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.EST_Publication)
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.EST_Publication)
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.EST_Publication, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.Pub_Language)
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.Pub_Language)
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.Pub_Language, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimatePublication.Total_Edition)
+                <div>
+                    @Html.EditorFor(model => model.EstimatePublication.Total_Edition)
+                    @Html.ValidationMessageFor(model => model.EstimatePublication.Total_Edition, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+        </div>
+
+        <div id="CreateEdition">
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Edition)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Edition)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Edition, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Height)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Height)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Height, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Width)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Width)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Width, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Rate)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Rate)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Rate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Total_Cost)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Total_Cost)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Total_Cost, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Agency_Discount)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Agency_Discount)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Agency_Discount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EstimateEdition.Total_NetCost)
+                <div>
+                    @Html.EditorFor(model => model.EstimateEdition.Total_NetCost)
+                    @Html.ValidationMessageFor(model => model.EstimateEdition.Total_NetCost, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Save" />
+            </div>
+        </div>
+
+}
+
